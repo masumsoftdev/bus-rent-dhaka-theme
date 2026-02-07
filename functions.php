@@ -176,3 +176,30 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function getIcon($name, $dir = '', $is_img = false) {
+  if (!filter_var($name, FILTER_VALIDATE_URL) === false) {
+    return file_get_contents( $name );
+  }else{
+    if($dir){
+        if ($dir == 'img') {
+            if ($is_img) {
+                return '<img alt="'.$name.'" src="'.get_stylesheet_directory_uri() . '/assets/'.$dir.'/'.$name.'.svg" />';
+            }else{
+                return file_get_contents(get_stylesheet_directory() . "/assets/".$dir."/$name.svg");
+            }
+            
+        }
+    }else{
+      return file_get_contents(get_stylesheet_directory() . "/assets/icons/$name.svg");
+    }
+  }
+}
+
+function busicon_short_code($atts) {
+	ob_start();
+	if( $atts['name'] ){
+		echo '<span class="scy-icon">' . getIcon($atts['name']) . '</span>';
+	}
+	return ob_get_clean();
+}
+add_shortcode('scyicon', 'busicon_short_code');
