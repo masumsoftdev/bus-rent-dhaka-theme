@@ -1,34 +1,50 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Bus_Rent_Dhaka
- */
+<!-- FOOTER -->
+<footer id="brd-footer" class="sec-gap">
+<div class="container">
+<div class="brd-footer-grid">
+  <div>
+    <h4>Contact</h4>
+    <p><i class="fa fa-phone"></i> +880 17XX-XXXXXX</p>
+    <p><i class="fab fa-whatsapp"></i> WhatsApp</p>
+    <p><i class="fa fa-envelope"></i> info@brdbusrental.com</p>
+  </div>
+  <div>
+    <h4>Office Address</h4>
+    <a href="#">Dhaka, Bangladesh</a>
+  </div>
+  <div>
+    <iframe src="https://maps.google.com/maps?q=dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200"></iframe>
+  </div>
+  <div>
+    <h4>Follow Us</h4>
+    <p><i class="fab fa-facebook"></i> Facebook</p>
+    <p><i class="fab fa-youtube"></i> YouTube</p>
+    <p><i class="fab fa-instagram"></i> Instagram</p>
+  </div>
+</div>
 
-?>
+<div class="brd-footer-bottom">
+  <p>
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Terms & Conditions</a> | 
+    <a href="#">About Us</a>
+  </p>
+  <p>© 2026 BRD Bus Rental. Designed by BRD.</p>
+</div>
+</div>
+</footer>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bus-rent-dhaka' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bus-rent-dhaka' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bus-rent-dhaka' ), 'bus-rent-dhaka', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:20,
+  autoplay:true,
+  responsive:{0:{items:2},600:{items:3},1000:{items:4}}
+});
+</script>
 <?php wp_footer(); ?>
-
 </body>
 </html>

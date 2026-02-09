@@ -134,20 +134,44 @@ function bus_rent_dhaka_widgets_init() {
 }
 add_action( 'widgets_init', 'bus_rent_dhaka_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
 function bus_rent_dhaka_scripts() {
-	wp_enqueue_style( 'bus-rent-dhaka-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	// Main stylesheet (style.css)
+	wp_enqueue_style(
+		'bus-rent-dhaka-style',
+		get_stylesheet_uri(),
+		array(),
+		_S_VERSION
+	);
+
+	// Custom stylesheet
+	wp_enqueue_style(
+		'bus-rent-dhaka-custom',
+		get_template_directory_uri() . '/assets/css/custom.css',
+		array( 'bus-rent-dhaka-style' ), // dependency
+		'1.0.0',
+		'all'
+	);
+
+	// RTL support
 	wp_style_add_data( 'bus-rent-dhaka-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'bus-rent-dhaka-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// Navigation script
+	wp_enqueue_script(
+		'bus-rent-dhaka-navigation',
+		get_template_directory_uri() . '/js/navigation.js',
+		array(),
+		_S_VERSION,
+		true
+	);
 
+	// Comment reply script
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'bus_rent_dhaka_scripts' );
+
 
 /**
  * Implement the Custom Header feature.

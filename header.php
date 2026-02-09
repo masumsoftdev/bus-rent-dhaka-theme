@@ -22,38 +22,27 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bus-rent-dhaka' ); ?></a>
+<!-- TOP HEADER -->
+<div id="brd-topbar">
+  <div class="container brd-topbar-inner">
+    <div>Trusted Corporate & Tourist Bus Rental in Dhaka</div>
+    <div class="brd-topbar-right">
+      <span><i class="fa fa-phone"></i> +880 17XX-XXXXXX</span>
+      <span>24/7 Service</span>
+    </div>
+  </div>
+</div>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bus_rent_dhaka_description = get_bloginfo( 'description', 'display' );
-			if ( $bus_rent_dhaka_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bus_rent_dhaka_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bus-rent-dhaka' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+<!-- MAIN HEADER -->
+<header id="brd-header">
+  <div class="container brd-header-inner">
+    <div class="brd-logo">BRD Bus Rental</div>
+    <nav class="brd-nav">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Fleet</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
