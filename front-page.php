@@ -18,7 +18,7 @@ get_header();
 </section>
 
 <!-- SERVICES -->
-<section class="brd-services sec-gap">
+<section class="brd-services sec-gap" data-aos="fade-up">
 <div class="container">
 <div class="section-content-class">
   <div class="brd-sec-title">

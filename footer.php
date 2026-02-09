@@ -34,17 +34,8 @@
 </div>
 </footer>
 
-<!-- JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:20,
-  autoplay:true,
-  responsive:{0:{items:2},600:{items:3},1000:{items:4}}
-});
-</script>
+
+<script> AOS.init();</script>
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -146,6 +146,28 @@ function bus_rent_dhaka_scripts() {
 
 	// Custom stylesheet
 	wp_enqueue_style(
+		'bus-rent-dhaka-owl-min',
+		get_template_directory_uri() . '/assets/css/owl.carousel.min.css',
+		array( ), // dependency
+		'1.0.0',
+		'all'
+	);
+	wp_enqueue_style(
+		'bus-rent-dhaka-owl-default',
+		get_template_directory_uri() . '/assets/css/owl.theme.default.min.css',
+		array( ), // dependency
+		'1.0.0',
+		'all'
+	);
+	wp_enqueue_style(
+		'bus-rent-dhaka-aos',
+		get_template_directory_uri() . '/assets/css/aos.css',
+		array( ), // dependency
+		'1.0.0',
+		'all'
+	);
+	// Custom stylesheet
+	wp_enqueue_style(
 		'bus-rent-dhaka-custom',
 		get_template_directory_uri() . '/assets/css/custom.css',
 		array( 'bus-rent-dhaka-style' ), // dependency
@@ -156,10 +178,24 @@ function bus_rent_dhaka_scripts() {
 	// RTL support
 	wp_style_add_data( 'bus-rent-dhaka-style', 'rtl', 'replace' );
 
-	// Navigation script
 	wp_enqueue_script(
-		'bus-rent-dhaka-navigation',
-		get_template_directory_uri() . '/js/navigation.js',
+		'bus-rent-dhaka-owl',
+		get_template_directory_uri() . '/assets/js/owl.carousel.min.js',
+		array(),
+		_S_VERSION,
+		true
+	);
+
+	wp_enqueue_script(
+		'bus-rent-dhaka-custom-aos',
+		get_template_directory_uri() . '/assets/js/aos.js',
+		array(),
+		_S_VERSION,
+		true
+	);
+	wp_enqueue_script(
+		'bus-rent-dhaka-custom-js',
+		get_template_directory_uri() . '/assets/js/custom.js',
 		array(),
 		_S_VERSION,
 		true

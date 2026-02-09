@@ -146,13 +146,16 @@ img{max-width:100%;display:block}
 /* =====================
    VEHICLES / BLOGS
 ===================== */
+.brd-vehicles, .brd-clients{
+    background-color: var(--brd-gray);
+}
 .brd-blog-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:24px;
 }
 .brd-blog-card{
-  background:#fff;
+  background:var(--brd-white);
   border-radius:12px;
   overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,.06);
@@ -211,7 +214,7 @@ img{max-width:100%;display:block}
    FOOTER
 ===================== */
 #brd-footer{
-  background:var(--brd-navy);
+  background:var(--brd-dark);
   color:#CBD5E1;
 }
 .brd-footer-grid{
