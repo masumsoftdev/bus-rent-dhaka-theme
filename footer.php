@@ -35,7 +35,11 @@
 </footer>
 
 
-<script> AOS.init();</script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		AOS.init();
+	});
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

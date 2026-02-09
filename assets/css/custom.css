@@ -4,11 +4,13 @@
 *{margin:0;padding:0;box-sizing:border-box}
 /* COLORS */
 :root{
-  --brd-navy:#0B1F33;
-  --brd-teal:#0EA5A4;
-  --brd-gray:#F1F5F9;
-  --brd-dark:#020617;
-  --brd-white:#ffffff;
+  --brd-navy      : #0B1F33;
+  --brd-teal      : #006362;
+  --brd-teal-light: #018790;
+  --brd-gray      : #F1F5F9;
+  --brd-dark      : #020617;
+  --brd-white     : #ffffff;
+  --brd-yellow    : #E09900;
 }
 body{
   font-family:'Roboto',sans-serif;
@@ -68,7 +70,7 @@ img{max-width:100%;display:block}
 #brd-header{
   position:sticky;
   top:0;
-  background:#fff;
+  background:var(--brd-teal);
   z-index:1000;
   box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
@@ -76,7 +78,8 @@ img{max-width:100%;display:block}
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:16px 0;
+  padding: 16px 0;
+  height: 80px;
 }
 .brd-logo{
   font-size:24px;
@@ -86,9 +89,9 @@ img{max-width:100%;display:block}
 .brd-nav a{
   margin-left:26px;
   font-weight:500;
-  color:#334155;
+  color:var(--brd-white);
 }
-
+.brd-nav a:hover{color: var(--brd-yellow);}
 /* =====================
    HERO SECTION
 ===================== */
@@ -128,7 +131,7 @@ img{max-width:100%;display:block}
   padding:14px 28px;
   border:2px solid #fff;
   margin-right:14px;
-  border-radius:50px;
+  border-radius:5px;
   font-weight:500;
   color:#fff;
 }
@@ -207,7 +210,10 @@ img{max-width:100%;display:block}
   padding:14px 30px;
   background:var(--brd-teal);
   color:#fff;
-  border-radius:40px;
+  border-radius:5px;
+}
+.brd-about-btn:hover{
+    background: var(--brd-teal-light);
 }
 
 /* =====================
@@ -217,6 +223,7 @@ img{max-width:100%;display:block}
   background:var(--brd-dark);
   color:#CBD5E1;
 }
+#brd-footer a:hover{color: var(--brd-yellow);}
 .brd-footer-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
