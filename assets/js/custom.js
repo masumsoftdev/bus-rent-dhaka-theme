@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (){
-$('.owl-carousel').owlCarousel({
+jQuery('.owl-carousel').owlCarousel({
     loop:true,
     margin:20,
     autoplay:true,

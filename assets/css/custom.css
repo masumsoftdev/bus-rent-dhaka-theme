@@ -10,7 +10,7 @@
   --brd-gray      : #F1F5F9;
   --brd-dark      : #020617;
   --brd-white     : #ffffff;
-  --brd-yellow    : #E09900;
+  --brd-orange    : #f0652b;
 }
 body{
   font-family:'Roboto',sans-serif;
@@ -31,10 +31,6 @@ img{max-width:100%;display:block}
 
 
 /* COMMON SECTION TITLE */
-.brd-sec-title{
-  text-align:center;
-  margin-bottom:40px;
-}
 .brd-sec-title h2{
   font-size:36px;
   color:var(--brd-navy);
@@ -98,7 +94,7 @@ img{max-width:100%;display:block}
 #brd-hero{
   position:relative;
   height:85vh;
-  background:url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957') center/cover no-repeat;
+  background:url('../img/hero-banner.webp') center/cover no-repeat;
 }
 #brd-hero::after{
   content:'';
@@ -213,7 +209,8 @@ img{max-width:100%;display:block}
   border-radius:5px;
 }
 .brd-about-btn:hover{
-    background: var(--brd-teal-light);
+    background: var(--brd-yellow);
+    color: var(--brd-white);
 }
 
 /* =====================

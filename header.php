@@ -27,7 +27,7 @@
   <div class="container brd-topbar-inner">
     <div>Trusted Corporate & Tourist Bus Rental in Dhaka</div>
     <div class="brd-topbar-right">
-      <span><i class="fa fa-phone"></i> +880 17XX-XXXXXX</span>
+      <?php echo getIcon('phone'); ?> +880 1974879000</span>
       <span>24/7 Service</span>
     </div>
   </div>
